@@ -88,6 +88,7 @@
  	}
  	
  	public static void output() {
+ 		oDiscount= dfDouble3v2.format (iDiscount);
  		oCost1 = dfDouble3v2.format(iCost1);
  		oCost2 = dfDouble3v2.format(iCost2);
  		oSubtotal = dfDouble3v2.format(cSubtotal);
@@ -101,6 +102,7 @@
  		System.out.println("Subtotal: " + oSubtotal);
  		System.out.println("Tax: " + oTax);
  		System.out.println("Total: " + oTotal);
+		System.out.println("Discount: " + oDiscount);
  		System.out.println("Merry Christmas!");
  		System.out.println("End of program");
  	}
