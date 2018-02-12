@@ -73,7 +73,6 @@
  	public static void calcs() {
  		cSubtotal = iCost1 + iCost2;
  		cTax = cSubtotal * .07;
- 		cDiscount = cSubtotal * .2;
  		cSubtotal = cSubtotal - cDiscount;
  		cTotal = cSubtotal + cTax;
  	
