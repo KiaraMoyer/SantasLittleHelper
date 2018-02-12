@@ -13,7 +13,7 @@
  
  class Lab2Santa {
  	// Global Definitions
- 	static String iFName, iLName, iToy1, iToy2, iData, iAge, oTotal, oSubtotal, oTax, oCost1, oCost2;
+ 	static String iDiscount, iFName, iLName, iToy1, iToy2, iData, iAge, oTotal, oSubtotal, oTax, oCost1, oCost2;
  	static double iCost1, iCost2, cTotal, cSubtotal, cTax, cDiscount;
  	static Scanner scanner;
  	static	Date	today;
@@ -67,13 +67,22 @@
  			System.out.println("Invalid price entered. Automated price to 0.00");
  			iCost2 = 0;
  		}
- 		
- 	}
+		System.out.println("Enter Discount")
+		iData = scanner.next();
+		
+		try { iDiscount = Double.parseDouble(iData);	     	
+ 		}
+		catch (Exception e) {
+			System.out.println("Invalid Discount entered.");
+			iDiscount = 0.00;
+		}
+	}
  	
  	public static void calcs() {
  		cSubtotal = iCost1 + iCost2;
  		cTax = cSubtotal * .07;
- 		cSubtotal = cSubtotal - cDiscount;
+ 		cDiscount = cSubtotal * .2;
+ 		cSubtotal = cSubtotal - iDiscount;
  		cTotal = cSubtotal + cTax;
  	
  	}
